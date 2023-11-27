@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Menu Responsivo</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">Arthur Dev Criativo</a></div>
+        <ul class="links">
+          <li><a href="home">Inicio</a></li>
+          <li><a href="sobre">Sobre</a></li>
+          <li><a href="servicos">Serviços</a></li>
+          <li><a href="contato">Contato</a></li>
+        </ul>
+        <a href="#" class="action_btn">Começar Agora</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="dropdown_menu">
+          <li><a href="home">Inicio</a></li>
+          <li><a href="sobre">Sobre</a></li>
+          <li><a href="servicos">Serviços</a></li>
+          <li><a href="contato">Contato</a></li>
+          <li><a href="#" class="action2_btn">Começar Agora</a></li>
+      </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Seja Bem-vinda</h1>
+            <p>Site Teste para Barra de Navegação <br> De maneira Responsiva e Interativa para Usuarios mobile.</p>
+        </section>
+    </main>
+
+    <script>
+        const toggle_Btn = document.querySelector('.toggle_btn')
+        const toggle_BtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggle_Btn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggle_BtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+  </body>
+</html>
